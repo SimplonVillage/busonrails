@@ -10,7 +10,9 @@
  <div id="nav">
     <% if current_user %>
       <%= link_to "Déconnexion", user_session_path(current_user.id), method: :delete %>
+        <% if current_user.parent && current_user.parent.id %>
       <%= link_to "Dashboard", parent_path(current_user.parent.id) %>
+        <% end %>
     <% else %>
       <%= link_to "S'enregistrer", new_user_path %> |
       <%= link_to "Se connecter", new_user_session_path %>
