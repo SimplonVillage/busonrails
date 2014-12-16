@@ -31,6 +31,14 @@ Rails.application.configure do
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
+  
+  # ajout des paramètres pour l'envoi de mail
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+        api_key: ENV['MAILGUN_KEY'],
+        domain: ENV['MAILGUN_DOMAIN']
+}
+
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
