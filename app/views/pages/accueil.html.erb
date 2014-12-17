@@ -2,18 +2,21 @@
 
 <!--il faut changer la distination de lien-->
 
-<center><h1>Transport scolaire!</h1></center>
-<center><h4>Année 2014-2015</h4></center>
-<div style="width:1000px; height:150px;text-align:center; border:solid 1px black; color:green">
-	
-		<p>kjldsfmlsqdjflkjvldsqkfj<br>
-			dsffqsqqdsgqffdsgdsfgfdg<br>
-			qfsmjmlfmjqdsmfljdslmjgsdfsq<br>
-			qsfdofmlsqdpoiejfmlsjflqksjf<br>
-			klhshdqoiezrosqfdhylqshkddhl<br>
-		</p>
-	
+<div class="row">
+	<div class="jumbotron text-center">
+		<h1>Transport Scolaire</h1>
+		<p>Année 2014-2015</p>
 
+		<div class="col-md-6 col-md-offset-3">
+			<button class="btn btn-danger">
+				<%= link_to 'Créer un compte', controller: "users", action:"new" %>
+			</button>
+		</div>
+	</div>
 </div>
 
-<%= link_to 'Créer un compte', controller: "users", action:"new" %>
+<div class="row">
+	<div class="home-content col-md-6 col-md-offset-3">
+		<h2>Comment utiliser cette application ?</h2>
+	</div>
+</div>
