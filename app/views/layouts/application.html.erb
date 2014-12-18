@@ -29,9 +29,9 @@
       
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
-      <li><%= button_to 'Déconnexion', user_session_path(current_user.id), :class => "btn btn-success", :method => :delete %>
+      <li class="nav-btn"><%= button_to 'Déconnexion', user_session_path(current_user.id), :class => "btn btn-success", :method => :delete %>
         <% if current_user.parent && current_user.parent.id %></li>
-      <li><%= link_to "Dashboard", parent_path(current_user.parent.id) %></li>
+      <li class="nav-btn"><%= button_to "Dashboard", parent_path(current_user.parent.id), :class => "btn btn-success" %></li>
         <% end %>
     <% else %>
       <li><%= button_to "Créer un compte", new_user_path, :class => "btn btn-success nav-btn", :method => :get %> </li>

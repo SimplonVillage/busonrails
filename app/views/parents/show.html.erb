@@ -1,27 +1,43 @@
-<h1>Tableau de bord</h1>
+<h1 class="titre">Tableau de bord</h1>
 
-<p>Bonjour <%= @parent.prenom %></p>
+<h2 class="titre">Bonjour <%= @parent.prenom %></h2>
 
-<p>Liste des enfants</p>
+<h3 class="titre">Liste des enfants</h3>
 
 <% @enfants.each do |enfant| %>
-  <ul>
-    <li><%= enfant.prenomenfant %></li>
-    <li><%= enfant.nomenfant  %></li>
-    <li><%= enfant.datenaissance %></li>
-    <li><%= enfant.ecole  %></li>
-    <li><%= enfant.classe %></li>
-  </ul>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <div class="field">
+          <ul>
+            <li><%= enfant.prenomenfant %></li>
+            <li><%= enfant.nomenfant  %></li>
+            <li><%= enfant.datenaissance %></li>
+            <li><%= enfant.ecole  %></li>
+            <li><%= enfant.classe %></li>
+          </ul>
 
-  <%= link_to "Modifier les informations", edit_enfant_path(enfant.id) %>
+        <%= link_to "Modifier les informations", edit_enfant_path(enfant.id) %>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <% end %>
 
-<p>Coordonnées parent</p>
-<ul>
-    <li><%= @parent.nom %></li>
-    <li><%= @parent.prenom %></li>
-    <li><%= @parent.adresse %></li>
-</ul>
+          <h3 class="titre">Coordonnées parent</h3>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <div class="field">
+          <ul>
+              <li><%= @parent.nom %></li>
+              <li><%= @parent.prenom %></li>
+              <li><%= @parent.adresse %></li>
+          </ul>
 
- <p><%= link_to "Modifier les coordonnées", edit_parent_path(@parent.id) %></p>
+          <%= link_to "Modifier les coordonnées", edit_parent_path(@parent.id) %>
+        </div>
+      </div>
+    </div>
+  </div>
