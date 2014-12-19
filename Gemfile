@@ -44,7 +44,9 @@ gem 'dotenv-rails', :groups => [:development, :test]
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-
+#gem pour google autocomplete
+gem 'jquery-ui-rails'
+gem 'gmaps-autocomplete-rails'
 
 
 

@@ -47,6 +47,8 @@
     <p id="notice"><%= flash[:notice] %></p>
     <p id="alert"><%= flash[:alert] %></p>
   </div>
+  <%= javascript_include_tag :application,  
+    "http://maps.googleapis.com/maps/api/js?sensor=false" %>
 <%= yield %>
 
 </body>
