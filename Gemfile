@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'sass-rails', '>= 3.2'
 gem 'autoprefixer-rails'
+gem 'sass'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -49,6 +50,6 @@ gem 'dotenv-rails', :groups => [:development, :test]
 
 
 
-#gem pourt le log in 
+#gem pour le log in 
 gem 'sorcery'
 gem 'pry'

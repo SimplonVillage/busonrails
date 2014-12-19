@@ -188,6 +188,7 @@ DEPENDENCIES
   pry
   rails (= 4.1.7)
   rails_admin
+  sass
   sass-rails (>= 3.2)
   sdoc (~> 0.4.0)
   sorcery
