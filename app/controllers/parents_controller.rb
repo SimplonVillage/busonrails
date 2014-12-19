@@ -55,6 +55,7 @@ class ParentsController < ApplicationController
                                    :urgadresse, 
                                    :urgteldom, 
                                    :urgtelpro)
+  
   end
 
 end

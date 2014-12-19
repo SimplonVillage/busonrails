@@ -57,7 +57,12 @@
     <%= t.text_field :urgtelpro %>
   </p>
   <li>
-  <div id="map_canvas" style="width:100%; height:100%"></div>
+  <div class="control-group">
+<%= label_tag :search, "Search For Address" %>
+<%= text_field_tag :location_search, nil, class: "span12 search-query", type: "search" %>
+</div>
+<%= render partial: "googlemap" %>
+  
 </li>
   <%= t.submit "Enregistrer", :class => "btn btn-success nav-btn" %>
      </div>

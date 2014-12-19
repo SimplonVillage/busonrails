@@ -16,17 +16,7 @@
 //= require_tree .
 //= require bootstrap-sprockets
 
-$(document).ready(function(){
-    initialize($("div#map_canvas").get(0));
-  });
-
-function initialize(element) {
-  var latlng = new google.maps.LatLng(-34.397, 150.644);
-  var myOptions = {
-    zoom: 8,
-    center: latlng,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  var map = new google.maps.Map(element, myOptions);
-  alert("test");
-}
+$(document).ready(function() { 
+  GmapsAutoComplete.init();
+  GmapsAutoComplete.autoCompleteInit();
+});
