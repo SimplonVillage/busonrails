@@ -7,6 +7,11 @@
 <%= form_for @parent do |t| %>
 
   <p>
+    <%= t.label "Civilité :" %>
+    <%= t.select :civilite, %w{ Monsieur Madame } %> <br> 
+  </p>
+
+  <p>
     <%= t.label "Nom :" %><br>
     <%= t.text_field :nom %>
   </p> 
