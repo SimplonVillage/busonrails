@@ -5,57 +5,64 @@
   <div class="col-md-4 col-md-offset-4">
     <div class="field">
 <%= form_for @parent do |t| %>
+
   <p>
     <%= t.label "Nom :" %><br>
     <%= t.text_field :nom %>
-  </p>
- 
+  </p> 
   <p>
     <%= t.label "Prénom :" %><br>
     <%= t.text_field :prenom %>
-  </p>
- 
+  </p> 
   <p>
     <%= t.label "Adresse :" %><br>
     <%= t.text_area :adresse %>
   </p>
-
   <p>
     <%= t.label "Tél domicile :" %><br>
     <%= t.text_field :teldom %>
   </p>
-
   <p>
-    <%= t.label "Tél pro :" %><br>
-    <%= t.text_field :telpro %>
+    <%= t.label "Tél portable Mère :" %><br>
+    <%= t.text_field :telport1 %>
   </p>
+  <p>
+    <%= t.label "Tél portable Père :" %><br>
+    <%= t.text_field :telport2 %>
+  </p>
+  <p>
+    <%= t.label "Tél professionnel de la Mère :" %><br>
+    <%= t.text_field :telpro1 %>
+  </p>
+  <p>
+    <%= t.label "Tél professionnel du Père :" %><br>
+    <%= t.text_field :telpro2 %>
+  </p>
+
 
   <h2 class="titre">Personne à prévenir en cas d'urgence</h2>
 
   <p>
     <%= t.label "Nom :" %><br>
     <%= t.text_field :urgnom %>
-  </p>
-  
+  </p>  
   <p>
     <%= t.label "Prénom :" %><br>
     <%= t.text_field :urgprenom %>
   </p>
-
   <p>
     <%= t.label "Adresse :" %><br>
     <%= t.text_area :urgadresse %>
   </p>
-
   <p>
     <%= t.label "Tél domicile :" %><br>
     <%= t.text_field :urgteldom %>
   </p>
-
   <p>
     <%= t.label "Tél pro :" %><br>
     <%= t.text_field :urgtelpro %>
   </p>
+
   <li>
   <div class="control-group">
 <%= label_tag :search, "Search For Address" %>
