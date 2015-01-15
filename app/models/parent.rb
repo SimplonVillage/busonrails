@@ -11,4 +11,20 @@ class Parent < ActiveRecord::Base
                         :telport1,
                         :urgtelport,
                         :civilite2
+
+validates_format_of :telpro1, :with => /[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}/,
+notice: "- Phone numbers must be in xxx-xxx-xxxx format."
+
+
+
+
+
+validates_format_of :telpro2, :with =>  /\d[0-9]\)*\z/ , :message => "Only positive number without spaces are allowed"
+validates_format_of :teldom, :with =>  /\d[0-9]\)*\z/ , :message => "Only positive number without spaces are allowed"
+validates_format_of :urgteldom, :with =>  /\d[0-9]\)*\z/ , :message => "Only positive number without spaces are allowed"
+validates_format_of :urgtelpro, :with =>  /\d[0-9]\)*\z/ , :message => "Only positive number without spaces are allowed"
+validates_format_of :telport1, :with =>  /\d[0-9]\)*\z/ , :message => "Only positive number without spaces are allowed"
+validates_format_of :telport2, :with =>  /\d[0-9]\)*\z/ , :message => "Only positive number without spaces are allowed"
+validates_format_of :urgtelport, :with =>  /\d[0-9]\)*\z/ , :message => "Only positive number without spaces are allowed"                   
+  
 end
