@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -31,18 +31,16 @@
       
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
-      <li class="nav-btn"><%= button_to 'Déconnexion', user_session_path(current_user.id), :class => "btn btn-info", :method => :delete %>
+          <li class="nav-btn"><%= button_to 'Déconnexion', user_session_path(current_user.id), :class => "btn btn-info", :method => :delete %>
         <% if current_user.parent && current_user.parent.id %></li>
+        <li class="nav-btn"><%= button_to "Dashboard", parent_path(current_user.parent.id), :method => :get,:class => "btn btn-info"  %></li>
+        <% end %>  
+        <% else %>      
 
-
-      <li class="nav-btn"><%= button_to "Dashboard", parent_path(current_user.parent.id), :method => :get,:class => "btn btn-info"  %></li>
-
-
+        <li><%= button_to "Créer un compte", new_user_path, :class => "btn btn-info nav-btn", :method => :get %> </li>
+        
+        <li><%= button_to "Se connecter", new_user_session_path, :class => "btn btn-info nav-btn", :method => :get  %></li> 
         <% end %>
-    <% else %>
-      <li><%= button_to "Créer un compte", new_user_path, :class => "btn btn-info nav-btn", :method => :get %> </li>
-      <li><%= button_to "Se connecter", new_user_session_path, :class => "btn btn-info nav-btn", :method => :get  %></li> 
-    <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

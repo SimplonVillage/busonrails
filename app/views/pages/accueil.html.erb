@@ -2,28 +2,15 @@
 
 <!--il faut changer la distination de lien-->
 
-<div class="row">
-	<div class="jumbotron text-center">
-		<h1>Transport Scolaire</h1>
-		<p>Année 2014-2015</p>
-
-		<div class="col-md-6 col-md-offset-3">
-			<%= button_to 'Créer un compte', new_user_path, :class => "btn btn-info", :method => :get %>
-		</div>
-	</div>
-</div>
-
-<div class="row">
-	<div class="home-content col-md-6 col-md-offset-3">
-		<h2>Comment utiliser cette application ?</h2>
-		<ol>
-			<li>Cliquez sur "créer un compte"</li>
-			<li>Veuillez renseigner votre email et un mot de passe</li>
-			<li>Cliquez sur valider</li>
-			<li>Vous allez recevoir un email de confirmation</li>
+<h1>Bienvenue sur la page d'accueil du site busonrails</h1>
 
 
-		</ol>
-	</div>
-</div>
+<h2>Vous pouvez vous connecter</h2>
 
+<h3 class="titre">Se connecter</h3>
+
+<%= render 'form' %>
+
+
+<!--page de connexion
+	infos

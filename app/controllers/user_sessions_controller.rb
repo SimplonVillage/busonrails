@@ -15,7 +15,10 @@ class UserSessionsController < ApplicationController
       else 
         redirect_back_or_to(new_parent_path, notice: 'Vous êtes connecté')
       end
-        
+ #   elsif 
+  #      @user = logged_in
+   #     x = <%= button_to "Suite de l'inscription", user_session_path(current_user.id), :class => "btn btn-info nav-btn", :method => :get %>
+
     else
       flash.now[:alert] = "Erreur d'identification"
       render action: 'new'
