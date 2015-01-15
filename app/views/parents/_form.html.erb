@@ -8,9 +8,8 @@
 
   <p>
     <%= t.label "Civilité :" %>
-    <%= t.select :civilite, %w{ Monsieur Madame } %> <br> 
+    <%= t.select :civilite, %w{ M. Mme } %> <br> 
   </p>
-
   <p>
     <%= t.label "Nom :" %><br>
     <%= t.text_field :nom %>
@@ -46,7 +45,10 @@
 
 
   <h2 class="titre">Personne à prévenir en cas d'urgence</h2>
-
+  <p>
+    <%= t.label "Civilité :" %>
+    <%= t.select :civilite2, %w{ M. Mme } %> <br> 
+  </p>
   <p>
     <%= t.label "Nom :" %><br>
     <%= t.text_field :urgnom %>
@@ -58,6 +60,10 @@
   <p>
     <%= t.label "Adresse :" %><br>
     <%= t.text_area :urgadresse %>
+  </p> 
+  <p>
+    <%= t.label "Tél portable urgence :" %><br>
+    <%= t.text_field :urgtelport %>
   </p>
   <p>
     <%= t.label "Tél domicile :" %><br>
@@ -70,13 +76,13 @@
 
   <li>
   <div class="control-group">
-<%= label_tag :search, "Search For Address" %>
-<%= text_field_tag :location_search, nil, class: "span12 search-query", type: "search" %>
-</div>
-<%= render partial: "googlemap" %>
+    <%= label_tag :search, "Search For Address" %>
+    <%= text_field_tag :location_search, nil, class: "span12 search-query", type: "search" %>
+  </div>
+  <%= render partial: "googlemap" %>
   
-</li>
-  <%= t.submit "Enregistrer", :class => "btn btn-info nav-btn" %>
+  </li>
+    <%= t.submit "Enregistrer", :class => "btn btn-info nav-btn" %>
      </div>
     </div>
   </div>

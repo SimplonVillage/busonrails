@@ -45,7 +45,8 @@ class ParentsController < ApplicationController
 
   def parent_params
     # white lister les params autorisés
-    params.require(:parent).permit( :nom,                                    :nom, 
+    params.require(:parent).permit( :civilite,
+                                    :nom, 
                                     :prenom, 
                                     :adresse,
                                     :teldom, 
@@ -57,7 +58,9 @@ class ParentsController < ApplicationController
                                     :urgteldom, 
                                     :urgtelpro,
                                     :telport1,
-                                    :telport2)
+                                    :telport2,
+                                    :urgtelport,
+                                    :civilite2)
   
   end
 

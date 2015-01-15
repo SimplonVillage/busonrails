@@ -46,7 +46,7 @@
 
   <div class="container-fluid">
     <div class="col row col-md-6 col-md-offset-3">
-      <h3 colspan="2" class="titre"> Coordonnées de M ou Madame <%= @parent.prenom %> <%= @parent.nom %></h3>
+      <h3 colspan="2" class="titre"> Coordonnées de <%= @parent.civilite %> <%= @parent.prenom %> <%= @parent.nom %></h3>
       <table class="table table-bordered table-striped table-condensed">
         
         <tr>
@@ -93,7 +93,7 @@
        
 <div class="container-fluid">
   <div class="col row col-md-6 col-md-offset-3">
-    <h3 colspan="2" class="titre"> Coordonnées de la personne à prévenir en cas d'urgence <%= @parent.urgprenom %> <%= @parent.urgnom %></h3>
+    <h3 colspan="2" class="titre">Personne à prévenir en cas d'urgence <%= @parent.civilite2 %> <%= @parent.urgprenom %> <%= @parent.urgnom %></h3>
       <table class="table table-bordered table-striped table-condensed">
         <tr>
           <th>Nom</th>
@@ -104,7 +104,11 @@
           <td><%= @parent.urgprenom %></td>
         </tr>
         <tr>
-          <th>Téléphone Domicile</th>
+          <th>Téléphone portable</th>
+          <td><%= @parent.urgtelport %></td>
+        </tr>
+        <tr>
+          <th>Téléphone domicile</th>
           <td><%= @parent.urgteldom %></td>
         </tr>        
         <tr>
