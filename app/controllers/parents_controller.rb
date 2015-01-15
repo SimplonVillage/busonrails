@@ -19,7 +19,7 @@ class ParentsController < ApplicationController
     if @parent.save
       redirect_to parent_path(@parent.id)
     else
-      binding.pry
+      
       redirect_to action: 'new'
     end
   end
