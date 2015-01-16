@@ -36,10 +36,11 @@
     </div>
   </div>
   <!--ajouter un enfant-->
-
-<div class="row">
-  <div class="col-md-2 col-md-offset-5"><%= button_to "Modifier les informations",  edit_enfant_path(enfant.id), :class => "btn btn-info", :method => :get %>
-  </div>   
+<div class="container">
+  <div class="row">
+    <div class="col-md-2 col-md-offset-5"><%= button_to "Modifier les informations",  edit_enfant_path(enfant.id), :class => "btn btn-info", :method => :get %>
+    </div>   
+  </div>
 </div>
 
 <% end %>

@@ -12,8 +12,7 @@ class Parent < ActiveRecord::Base
                         :urgtelport,
                         :civilite2
 
-validates_format_of :telpro1, :with => /[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}/,
-notice: "- Phone numbers must be in xxx-xxx-xxxx format."
+validates_format_of :telpro1, :with =>  /\d[0-9]\)*\z/, :flash => { :success => "message"}
 
 
 
