@@ -19,8 +19,7 @@ class ParentsController < ApplicationController
     if @parent.save
       redirect_to parent_path(@parent.id)
     else
-      
-      redirect_to action: 'new'
+      render action: 'new'
     end
   end
 
