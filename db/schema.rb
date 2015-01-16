@@ -28,23 +28,22 @@ ActiveRecord::Schema.define(version: 20150115093123) do
     t.string   "nom"
     t.string   "prenom"
     t.text     "adresse"
-    t.string   "teldom"
-    t.string   "telpro"
+    t.string   "teldom",     limit: 10, null: false
     t.string   "urgnom"
     t.string   "urgprenom"
-    t.string   "urgtel"
+    t.string   "urgtel",     limit: 10, null: false
     t.text     "urgadresse"
-    t.string   "urgteldom"
-    t.string   "urgtelpro"
+    t.string   "urgteldom",  limit: 10, null: false
+    t.string   "urgtelpro",  limit: 10, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.integer  "telport1"
-    t.integer  "telport2"
-    t.integer  "telpro1"
-    t.integer  "telpro2"
+    t.string   "urgtelport"
+    t.string   "telport1"
+    t.string   "telport2"
+    t.string   "telpro1"
+    t.string   "telpro2"
     t.string   "civilite"
-    t.integer  "urgtelport"
     t.string   "civilite2"
   end
 

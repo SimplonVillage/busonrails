@@ -4,8 +4,7 @@ class CreateParents < ActiveRecord::Migration
       t.string :nom
       t.string :prenom
       t.text :adresse
-      t.integer :teldom, :limit => 10, :null => false
-      t.string :telpro, :limit => 10, :null => false
+      t.string :teldom, :limit => 10, :null => false
       t.string :urgnom
       t.string :urgprenom
       t.string :urgtel, :limit => 10, :null => false
