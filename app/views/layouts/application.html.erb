@@ -36,8 +36,9 @@
         <li class="nav-btn"><%= button_to "Dashboard", parent_path(current_user.parent.id), :method => :get,:class => "btn btn-info"  %></li>
         <% end %>  
         <% else %>      
-
-        <li><%= button_to "Créer un compte", new_user_path, :class => "btn btn-info nav-btn", :method => :get %> </li>
+          <% if controller_name != 'inscription' %>
+          <li><%= button_to "Créer un compte", new_user_path, :class => "btn btn-info nav-btn", :method => :get %> </li>
+          <% end %>
         
         <li><%= button_to "Se connecter", new_user_session_path, :class => "btn btn-info nav-btn", :method => :get  %></li> 
         <% end %>

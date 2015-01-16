@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
   
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  root 'pages#accueil'
-
-  get 'accueil' => "pages#accueil"
+  root 'inscription#index'
 
   resources :parents
 
   resources :enfants
   
-  resources :inscription
+  get 'inscription' => 'inscription#index'
 
   resources :user_sessions
 
