@@ -38,7 +38,9 @@
   <!--ajouter un enfant-->
 <div class="container">
   <div class="row">
-    <div class="col-md-2 col-md-offset-5"><%= button_to "Modifier les informations",  edit_enfant_path(enfant.id), :class => "btn btn-info", :method => :get %>
+    <div class="col-md-2 col-md-offset-3"><%= button_to "Ajouter un enfant",  new_enfant_path, :class => "btn btn-info", :method => :get %>
+    </div>    
+    <div class="col-md-2 col-md-offset-1"><%= button_to "Modifier les informations",  edit_enfant_path(enfant.id), :class => "btn btn-info", :method => :get %>
     </div>   
   </div>
 </div>
