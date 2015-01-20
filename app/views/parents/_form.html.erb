@@ -1,5 +1,18 @@
 <!-- Interface parents -->
 <p id="notice"><%= notice %></p>
+<!--Afficher les erreurs -->
+<% if @parent.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@parent.errors.count, "error") %> Erreur boufon</h2>
+ 
+    <ul>
+    <% @parent.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>"
+
 <div class="container-fluid">
 <div class="row">
   <div class="col-md-4 col-md-offset-4">

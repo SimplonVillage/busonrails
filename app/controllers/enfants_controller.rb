@@ -9,7 +9,7 @@ class EnfantsController < ApplicationController
     # créer un ENfant ds la BDD à partir du formulaire
 		@enfant = current_user.enfants.new(enfant_params)
     if @enfant.save
-      redirect_to parent_path
+      redirect_to new_parent_path
     else
       render action: 'new'
     end
