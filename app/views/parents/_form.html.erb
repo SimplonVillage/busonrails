@@ -11,7 +11,7 @@
     <% end %>
     </ul>
   </div>
-<% end %>"
+<% end %>
 
 <div class="container-fluid">
 <div class="row">
@@ -41,6 +41,7 @@
   </p>
   <p>
     <%= t.label "Tél portable de la Mère :" %><br>
+    <%= error_message_for @parent,:telport1 %>
     <%= t.text_field :telport1 %>
   </p>
   <p>
