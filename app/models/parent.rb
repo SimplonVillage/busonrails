@@ -1,9 +1,9 @@
 class Parent < ActiveRecord::Base
 	belongs_to :user
-  validates :nom, format: { with: /\A[a-zA-Z]+\z/, message: "only allows letters" } 
-  validates :prenom, format: { with: /\A[a-zA-Z]+\z/, message: "only allows letters" } 
-  validates :urgnom, format: { with: /\A[a-zA-Z]+\z/, message: "only allows letters" } 
-  validates :urgprenom, format: { with: /\A[a-zA-Z]+\z/, message: "only allows letters" } 
+  validates :nom, format: { with: /\A[a-zA-Z]+\z/, message: I18n.t('errors.messages.not_a_string') } 
+  validates :prenom, format: { with: /\A[a-zA-Z]+\z/, message: I18n.t('errors.messages.not_a_string') } 
+  validates :urgnom, format: { with: /\A[a-zA-Z]+\z/, message: I18n.t('errors.messages.not_a_string') } 
+  validates :urgprenom, format: { with: /\A[a-zA-Z]+\z/, message: I18n.t('errors.messages.not_a_string') } 
 
 
 	validates_presence_of :civilite, 
@@ -25,17 +25,6 @@ class Parent < ActiveRecord::Base
   validates :urgtelport, presence: true, numericality: true, length: { is: 10 }
   validates :urgtelpro, presence: true, numericality: true, length: { is: 10 }
 
-  def a_method_used_for_validation_purposes
-    errors.add(:name, "cannot contain the characters !@#%*()_-+=")
-  end
- 
+
 
 end
-
-  parent = Parent.create(nom: "!@#")
-   
-  parent.errors[:nom]
-   # => ["cannot contain the characters !@#%*()_-+="]
-   
-  parent.errors.full_messages
-   # => ["Name cannot contain the characters !@#%*()_-+="]
