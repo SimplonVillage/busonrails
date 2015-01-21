@@ -30,7 +30,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         Mailer.welcome_email(@user).deliver
-        current_user = @user
+        login(@user.email, user_params[:password])
         format.html { redirect_to new_enfant_path, notice: "L'utilisateur a bien été créé." }
         format.json { render :show, status: :created, location: @user }
         #redirect_to(:users, notice: "L'utilisateur a bien été créé.")

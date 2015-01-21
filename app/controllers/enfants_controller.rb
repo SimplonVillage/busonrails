@@ -11,7 +11,7 @@ class EnfantsController < ApplicationController
     if @enfant.save
       redirect_to new_parent_path
     else
-      redirect_to new_enfant_path
+      render action: 'new'
     end
   
   end
@@ -36,6 +36,7 @@ class EnfantsController < ApplicationController
        redirect_to parent_path(current_user)
     end 
   end
+
 
   private
 

@@ -1,70 +1,101 @@
 <!-- Interface parents -->
+<p id="notice"><%= notice %></p>
+<!--Afficher les erreurs -->
+<% if @parent.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@parent.errors.count, "error") %> Erreur boufon</h2>
+ 
+    <ul>
+    <% @parent.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>"
 
 <div class="container-fluid">
 <div class="row">
   <div class="col-md-4 col-md-offset-4">
     <div class="field">
 <%= form_for @parent do |t| %>
+
+  <p>
+    <%= t.label "Civilité :" %>
+    <%= t.select :civilite, %w{ M. Mme } %> <br> 
+  </p>
   <p>
     <%= t.label "Nom :" %><br>
     <%= t.text_field :nom %>
-  </p>
- 
+  </p> 
   <p>
     <%= t.label "Prénom :" %><br>
     <%= t.text_field :prenom %>
-  </p>
- 
+  </p> 
   <p>
     <%= t.label "Adresse :" %><br>
     <%= t.text_area :adresse %>
   </p>
-
   <p>
     <%= t.label "Tél domicile :" %><br>
     <%= t.text_field :teldom %>
   </p>
-
   <p>
-    <%= t.label "Tél pro :" %><br>
-    <%= t.text_field :telpro %>
+    <%= t.label "Tél portable de la Mère :" %><br>
+    <%= t.text_field :telport1 %>
+  </p>
+  <p>
+    <%= t.label "Tél portable du Père :" %><br>
+    <%= t.text_field :telport2 %>
+  </p>
+  <p>
+    <%= t.label "Tél professionnel de la Mère :" %><br>
+    <%= t.text_field :telpro1 %>
+  </p>
+  <p>
+    <%= t.label "Tél professionnel du Père :" %><br>
+    <%= t.text_field :telpro2 %>
   </p>
 
-  <h2 class="titre">Personne à prévenir en cas d'urgence</h2>
 
+  <h2 class="titre">Personne à prévenir en cas d'urgence</h2>
+  <p>
+    <%= t.label "Civilité :" %>
+    <%= t.select :civilite2, %w{ M. Mme } %> <br> 
+  </p>
   <p>
     <%= t.label "Nom :" %><br>
     <%= t.text_field :urgnom %>
-  </p>
-  
+  </p>  
   <p>
     <%= t.label "Prénom :" %><br>
     <%= t.text_field :urgprenom %>
   </p>
-
   <p>
     <%= t.label "Adresse :" %><br>
     <%= t.text_area :urgadresse %>
+  </p> 
+  <p>
+    <%= t.label "Tél portable urgence :" %><br>
+    <%= t.text_field :urgtelport %>
   </p>
-
   <p>
     <%= t.label "Tél domicile :" %><br>
     <%= t.text_field :urgteldom %>
   </p>
-
   <p>
-    <%= t.label "Tél pro :" %><br>
+    <%= t.label "Tél professionnel :" %><br>
     <%= t.text_field :urgtelpro %>
   </p>
+
   <li>
   <div class="control-group">
-<%= label_tag :search, "Search For Address" %>
-<%= text_field_tag :location_search, nil, class: "span12 search-query", type: "search" %>
-</div>
-<%= render partial: "googlemap" %>
+    <%= label_tag :search, "Search For Address" %>
+    <%= text_field_tag :location_search, nil, class: "span12 search-query", type: "search" %>
+  </div>
+  <%= render partial: "googlemap" %>
   
-</li>
-  <%= t.submit "Enregistrer", :class => "btn btn-info nav-btn" %>
+  </li>
+    <%= t.submit "Enregistrer", :class => "btn btn-info nav-btn" %>
      </div>
     </div>
   </div>

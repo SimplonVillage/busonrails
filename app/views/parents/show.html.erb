@@ -36,18 +36,22 @@
     </div>
   </div>
   <!--ajouter un enfant-->
-
-<div class="row">
-  <div class="col-md-2 col-md-offset-5"><%= button_to "Modifier les coordonnées",  edit_enfant_path(enfant.id), :class => "btn btn-info", :method => :get %>
-  </div>   
+<div class="container">
+  <div class="row">
+    <div class="col-md-2 col-md-offset-3"><%= button_to "Ajouter un enfant",  new_enfant_path, :class => "btn btn-info", :method => :get %>
+    </div>    
+    <div class="col-md-2 col-md-offset-1"><%= button_to "Modifier les informations",  edit_enfant_path(enfant.id), :class => "btn btn-info", :method => :get %>
+    </div>   
+  </div>
 </div>
 
 <% end %>
 
   <div class="container-fluid">
     <div class="col row col-md-6 col-md-offset-3">
-      <h3 colspan="2" class="titre">Coordonnées des parents</h3>
+      <h3 colspan="2" class="titre"> Coordonnées de <%= @parent.civilite %> <%= @parent.prenom %> <%= @parent.nom %></h3>
       <table class="table table-bordered table-striped table-condensed">
+        
         <tr>
           <th>Nom</th>
           <td><%= @parent.nom %></td>
@@ -60,12 +64,29 @@
           <th>Adresse</th>
           <td><%= @parent.adresse %></td>
         </tr>
-
+        <tr>
+          <th>Téléphone Domicile</th>
+          <td><%= @parent.teldom %></td>
+        </tr>
+        <tr>
+          <th>Téléphone portable de la mère</th>
+          <td><%= @parent.telport1 %></td>
+        </tr>
+        <tr>
+          <th>Téléphone portable du père</th>
+          <td><%= @parent.telport1 %></td>
+        </tr>
+        <tr>
+          <th>Téléphone professionnel de la mère</th>
+          <td><%= @parent.telpro1 %></td>
+        </tr>
+        <tr>
+          <th>Téléphone professionnel du père</th>
+          <td><%= @parent.telpro2 %></td>
+        </tr>
       </table>
     </div>
   </div>
-
-
         
 
 <div class="row">
@@ -73,3 +94,35 @@
   </div>
 </div>
        
+<div class="container-fluid">
+  <div class="col row col-md-6 col-md-offset-3">
+    <h3 colspan="2" class="titre">Personne à prévenir en cas d'urgence <%= @parent.civilite2 %> <%= @parent.urgprenom %> <%= @parent.urgnom %></h3>
+      <table class="table table-bordered table-striped table-condensed">
+        <tr>
+          <th>Nom</th>
+          <td><%= @parent.urgnom %></td>
+        </tr>
+        <tr>
+          <th>Prénom</th>
+          <td><%= @parent.urgprenom %></td>
+        </tr>
+        <tr>
+          <th>Téléphone portable</th>
+          <td><%= @parent.urgtelport %></td>
+        </tr>
+        <tr>
+          <th>Téléphone domicile</th>
+          <td><%= @parent.urgteldom %></td>
+        </tr>        
+        <tr>
+          <th>Téléphone professionnel</th>
+          <td><%= @parent.urgtelpro %></td>
+        </tr>
+      </table>
+    </div>
+  </div>        
+
+<div class="row">
+  <div class="col-md-2 col-md-offset-5"><%= button_to "Modifier les coordonnées", edit_parent_path(@parent.id), :class => "btn btn-info", :method => :get %>
+  </div>
+</div>

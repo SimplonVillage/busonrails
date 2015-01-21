@@ -2,25 +2,26 @@
 <div class="row">
   <div class="col-md-4 col-md-offset-4">
     <div class="field">
+      
 <%= form_for @enfant do |f| %>
 <p>
-   <%= f.label "Nom" %><br>
+   <%= f.label "Nom :" %><br>
    <%= f.text_field :nomenfant %>
 </p>   
 <p>
-   <%= f.label "Prénom" %><br>
+   <%= f.label "Prénom :" %><br>
    <%= f.text_field :prenomenfant %>
 </p> 
 <p>
-   <%= f.label "Date de naissance" %><br>
+   <%= f.label "Date de naissance :" %><br>
    <%= f.text_field :datenaissance %>
 </p> 
 <p>
-   <%= f.label "Ecole" %><br>
+   <%= f.label "École :" %><br>
    <%= f.text_field :ecole %>
 </p> 
 <p>
-   <%= f.label "Classe" %><br>
+   <%= f.label "Classe :" %><br>
    <%= f.text_field :classe %>
 </p> 
 

@@ -19,8 +19,7 @@ class ParentsController < ApplicationController
     if @parent.save
       redirect_to parent_path(@parent.id)
     else
-      binding.pry
-      redirect_to action: 'new'
+      render action: 'new'
     end
   end
 
@@ -45,16 +44,22 @@ class ParentsController < ApplicationController
 
   def parent_params
     # white lister les params autorisés
-    params.require(:parent).permit(:nom, 
-                                   :prenom, 
-                                   :adresse,
-                                   :teldom, 
-                                   :telpro, 
-                                   :urgnom, 
-                                   :urgprenom, 
-                                   :urgadresse, 
-                                   :urgteldom, 
-                                   :urgtelpro)
+    params.require(:parent).permit( :civilite,
+                                    :nom, 
+                                    :prenom, 
+                                    :adresse,
+                                    :teldom, 
+                                    :telpro1,
+                                    :telpro2, 
+                                    :urgnom, 
+                                    :urgprenom, 
+                                    :urgadresse, 
+                                    :urgteldom, 
+                                    :urgtelpro,
+                                    :telport1,
+                                    :telport2,
+                                    :urgtelport,
+                                    :civilite2)
   
   end
 

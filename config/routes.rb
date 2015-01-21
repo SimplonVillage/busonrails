@@ -1,17 +1,18 @@
 Rails.application.routes.draw do
   
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  root 'pages#accueil'
-
-  get 'accueil' => "pages#accueil"
+  root 'inscription#index'
 
   resources :parents
 
   resources :enfants
+  
+  get 'inscription' => 'inscription#index'
 
   resources :user_sessions
 
   resources :users
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

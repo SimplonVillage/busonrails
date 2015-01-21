@@ -2,26 +2,17 @@
 <html>
 <head>
   <title>Busonrails</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <!--<div class="navbar-header">
-      <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><%= link_to image_tag("bus.jpg", :width=> 70, :height =>70 ), :action =>'accueil', :controller =>'pages'%></a>
-    </div>-->
+    
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -31,23 +22,21 @@
       
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
-      <li class="nav-btn"><%= button_to 'Déconnexion', user_session_path(current_user.id), :class => "btn btn-info", :method => :delete %>
+          <li class="nav-btn"><%= button_to 'Déconnexion', user_session_path(current_user.id), :class => "btn btn-info", :method => :delete %>
         <% if current_user.parent && current_user.parent.id %></li>
-
-
-      <li class="nav-btn"><%= button_to "Dashboard", parent_path(current_user.parent.id), :method => :get,:class => "btn btn-info"  %></li>
-
-
+        <li class="nav-btn"><%= button_to "Dashboard", parent_path(current_user.parent.id), :method => :get,:class => "btn btn-info"  %></li>
+        <% end %>  
+        <% else %>      
+          <% if controller_name != 'inscription' %>
+          <li><%= button_to "Créer un compte", new_user_path, :class => "btn btn-info nav-btn", :method => :get %> </li>
+          <% end %>
+        
+        <li><%= button_to "Se connecter", new_user_session_path, :class => "btn btn-info nav-btn", :method => :get  %></li> 
         <% end %>
-    <% else %>
-      <li><%= button_to "Créer un compte", new_user_path, :class => "btn btn-info nav-btn", :method => :get %> </li>
-      <li><%= button_to "Se connecter", new_user_session_path, :class => "btn btn-info nav-btn", :method => :get  %></li> 
-    <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-  
  
   <div>
     <p id="notice"><%= flash[:notice] %></p>
