@@ -16,11 +16,11 @@ class Parent < ActiveRecord::Base
                         :civilite2
 
 
-  validates :teldom, presence: true, numericality: true, length: { is: 10 }
+  #validates :teldom, presence: true, numericality: true, length: { is: 10 }
   validates :telport1, presence: true, numericality: true, length: { is: 10 }
   validates :telport2, presence: true, numericality: true, length: { is: 10 }
-  validates :telpro1, numericality: true, length: { is: 10 }
-  validates :telpro2, numericality: true, length: { is: 10 }
+  # validates :telpro1, numericality: true, length: { is: 10 }
+  # validates :telpro2, numericality: true, length: { is: 10 }
   validates :urgteldom, presence: true, numericality: true, length: { is: 10 }
   validates :urgtelport, presence: true, numericality: true, length: { is: 10 }
   validates :urgtelpro, presence: true, numericality: true, length: { is: 10 }
