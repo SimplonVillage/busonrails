@@ -1,6 +1,6 @@
 <h1 class="titre">Tableau de bord</h1>
 
-<h2 class="titre">Bonjour <%= @parent.prenom %></h2>
+<h2 class="titre">Bonjour <%= @parent.prenom.capitalize %></h2>
 
 
 
@@ -12,11 +12,11 @@
 
           <tr>
             <th>Prénom</th>
-            <td><%= enfant.prenomenfant %></td>
+            <td><%= enfant.prenomenfant.capitalize %></td>
           </tr>
           <tr>
             <th>Nom</th>
-            <td><%= enfant.nomenfant  %></td>
+            <td><%= enfant.nomenfant.capitalize %></td>
           </tr>
 
           <tr>
@@ -25,7 +25,7 @@
           </tr>
           <tr>
             <th>École</th>
-            <td><%= enfant.ecole  %></td>
+            <td><%= enfant.ecole %></td>
           </tr>
           <tr> 
             <th>Classe</th>
@@ -49,16 +49,16 @@
 
   <div class="container-fluid">
     <div class="col row col-md-6 col-md-offset-3">
-      <h3 colspan="2" class="titre"> Coordonnées de <%= @parent.civilite %> <%= @parent.prenom %> <%= @parent.nom %></h3>
+      <h3 colspan="2" class="titre"> Coordonnées de <%= @parent.civilite %> <%= @parent.prenom.capitalize %> <%= @parent.nom.capitalize %></h3>
       <table class="table table-bordered table-striped table-condensed">
         
         <tr>
           <th>Nom</th>
-          <td><%= @parent.nom %></td>
+          <td><%= @parent.nom.capitalize %></td>
         </tr>
         <tr>
           <th>Prénom</th>
-          <td><%= @parent.prenom %></td>
+          <td><%= @parent.prenom.capitalize %></td>
         </tr>
         <tr>
           <th>Adresse</th>
@@ -96,15 +96,15 @@
        
 <div class="container-fluid">
   <div class="col row col-md-6 col-md-offset-3">
-    <h3 colspan="2" class="titre">Personne à prévenir en cas d'urgence <%= @parent.civilite2 %> <%= @parent.urgprenom %> <%= @parent.urgnom %></h3>
+    <h3 colspan="2" class="titre">Personne à prévenir en cas d'urgence <%= @parent.civilite2 %> <%= @parent.urgprenom.capitalize %> <%= @parent.urgnom.capitalize %></h3>
       <table class="table table-bordered table-striped table-condensed">
         <tr>
           <th>Nom</th>
-          <td><%= @parent.urgnom %></td>
+          <td><%= @parent.urgnom.capitalize %></td>
         </tr>
         <tr>
           <th>Prénom</th>
-          <td><%= @parent.urgprenom %></td>
+          <td><%= @parent.urgprenom.capitalize %></td>
         </tr>
         <tr>
           <th>Téléphone portable</th>

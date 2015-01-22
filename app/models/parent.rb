@@ -1,9 +1,9 @@
 class Parent < ActiveRecord::Base
 	belongs_to :user
-  validates :nom, format: { with: /\A[a-zA-Z]+\z/, message: I18n.t('errors.messages.not_a_string') } 
-  validates :prenom, format: { with: /\A[a-zA-Z]+\z/, message: I18n.t('errors.messages.not_a_string') } 
-  validates :urgnom, format: { with: /\A[a-zA-Z]+\z/, message: I18n.t('errors.messages.not_a_string') } 
-  validates :urgprenom, format: { with: /\A[a-zA-Z]+\z/, message: I18n.t('errors.messages.not_a_string') } 
+  validates :nom, format: { with: /\A[A-Za-zé\.¸UûÙùàÀèÈéÉïÏîÎôÔêÊçÇ \,\\\'-]+\z/, message: I18n.t('errors.messages.not_a_string') } 
+  validates :prenom, format: { with: /\A[A-Za-zé\.¸UûÙùàÀèÈéÉïÏîÎôÔêÊçÇ \,\\\'-]+\z/, message: I18n.t('errors.messages.not_a_string') } 
+  validates :urgnom, format: { with: /\A[A-Za-zé\.¸UûÙùàÀèÈéÉïÏîÎôÔêÊçÇ \,\\\'-]+\z/, message: I18n.t('errors.messages.not_a_string') } 
+  validates :urgprenom, format: { with: /\A[A-Za-zé\.¸UûÙùàÀèÈéÉïÏîÎôÔêÊçÇ \,\\\'-]+\z/, message: I18n.t('errors.messages.not_a_string') } 
 
 
 	validates_presence_of :civilite, 
