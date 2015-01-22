@@ -1,17 +1,5 @@
 <!-- Interface parents -->
 <p id="notice"><%= notice %></p>
-<!--Afficher les erreurs -->
-<% if @parent.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@parent.errors.count, "error") %> Erreur boufon</h2>
- 
-    <ul>
-    <% @parent.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>"
 
 <div class="container-fluid">
 <div class="row">
@@ -26,34 +14,42 @@
   <p>
     <%= t.label "Nom :" %><br>
     <%= t.text_field :nom %>
+    <%= error_message_for @parent,:nom %>
   </p> 
   <p>
     <%= t.label "Prénom :" %><br>
     <%= t.text_field :prenom %>
+    <%= error_message_for @parent,:prenom %>
   </p> 
   <p>
     <%= t.label "Adresse :" %><br>
     <%= t.text_area :adresse %>
+    <%= error_message_for @parent,:adresse %>
   </p>
   <p>
     <%= t.label "Tél domicile :" %><br>
     <%= t.text_field :teldom %>
+    <%= error_message_for @parent,:teldom %>
   </p>
   <p>
     <%= t.label "Tél portable de la Mère :" %><br>
     <%= t.text_field :telport1 %>
+    <%= error_message_for @parent,:telport1 %>
   </p>
   <p>
     <%= t.label "Tél portable du Père :" %><br>
     <%= t.text_field :telport2 %>
+    <%= error_message_for @parent,:telport2 %>
   </p>
   <p>
     <%= t.label "Tél professionnel de la Mère :" %><br>
     <%= t.text_field :telpro1 %>
+    <%= error_message_for @parent,:telpro1 %>
   </p>
   <p>
     <%= t.label "Tél professionnel du Père :" %><br>
     <%= t.text_field :telpro2 %>
+    <%= error_message_for @parent,:telpro2 %>
   </p>
 
 
@@ -65,26 +61,32 @@
   <p>
     <%= t.label "Nom :" %><br>
     <%= t.text_field :urgnom %>
+    <%= error_message_for @parent,:urgnom %>
   </p>  
   <p>
     <%= t.label "Prénom :" %><br>
     <%= t.text_field :urgprenom %>
+    <%= error_message_for @parent,:urgprenom %>
   </p>
   <p>
     <%= t.label "Adresse :" %><br>
     <%= t.text_area :urgadresse %>
+    <%= error_message_for @parent,:urgadresse %>
   </p> 
   <p>
     <%= t.label "Tél portable urgence :" %><br>
     <%= t.text_field :urgtelport %>
+    <%= error_message_for @parent,:urgteport %>
   </p>
   <p>
     <%= t.label "Tél domicile :" %><br>
     <%= t.text_field :urgteldom %>
+    <%= error_message_for @parent,:urgteldom %>
   </p>
   <p>
     <%= t.label "Tél professionnel :" %><br>
     <%= t.text_field :urgtelpro %>
+    <%= error_message_for @parent,:urgtelpro %>
   </p>
 
   <li>

@@ -31,7 +31,7 @@ gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'globalize', '~> 4.0.2'
 #permet de stocker les variables d'environnement en local pour cacher les clé api
 gem 'dotenv-rails', :groups => [:development, :test]
 
