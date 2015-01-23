@@ -3,6 +3,8 @@ class EnfantsController < ApplicationController
   def new
     # renvoie le formulaire enfant
     @enfant = Enfant.new
+    @ecoles = Ecole.all.map{ |ecole| [ecole.nom, ecole.id] }
+    @classes = Classe.all.map{ |classe| ["#{classe.ecole.nom} - #{classe.nom}", classe.id]}
   end
 
   def create
