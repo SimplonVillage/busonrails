@@ -6,3 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 user = User.create(email: 'admin@bus.org', password: 'azer', password_confirmation: 'azer', admin: true)
+
+Niveau.create([
+                {nom: 'PS'},
+                {nom: 'MS'},
+                {nom: 'GS'},
+                {nom: 'CP'},
+                {nom: 'CE1'},
+                {nom: 'CE2'},
+                {nom: 'CM1'},
+                {nom: 'CM2'}])
