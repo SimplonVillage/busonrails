@@ -55,3 +55,4 @@ gem 'gmaps-autocomplete-rails'
 #gem pour le log in 
 gem 'sorcery'
 gem 'pry'
+

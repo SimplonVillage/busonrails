@@ -1,3 +1,39 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/**************************
+  Home page
+**************************/
+
+.home-content p {
+  font-size: 16px;
+}
+
+.home-button a {
+  color: #FFF;
+}
+.titlenav {
+  font-size: 40px;
+  padding-left: 20px;
+  font-family: 'KGPrimaryPenmanshipLined';
+  }
+.nav-btn {
+  margin-right: 10px;
+  margin-bottom: auto;
+  margin-top: 7px;
+}
+.titre {
+  text-align: center;
+}
+#danger {
+  color: white;
+}
+table {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 body {
   background-color: #fff;
   color: #333;
