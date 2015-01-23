@@ -6,6 +6,7 @@ RailsAdmin.config do |config|
     # Use sorcery's before filter to auth users
     require_admin
   end
+
   ## == Devise ==
   # config.authenticate_with do
   #   warden.authenticate! scope: :user

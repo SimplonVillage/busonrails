@@ -3,14 +3,14 @@ fr:
     js:
       true: Vrai
       false: Faux
-      is_present: Est prÃ©sent
+      is_present: Est présent
       is_blank: Est vide
       date: Date ...
       between_and_: Entre le ... et le ...
       today: "Aujourd'hui"
       yesterday: Hier
       this_week: Cette semaine
-      last_week: Semaine prÃ©cÃ©dente
+      last_week: Semaine précédente
       number: Nombre ...
       contains: Contient
       is_exactly: Est exactement
@@ -20,14 +20,14 @@ fr:
     home:
       name: Home
     pagination:
-      previous: "&laquo; PrÃ©c."
+      previous: "&laquo; Préc."
       next: "Suiv. &raquo;"
       truncate: "â€¦"
     misc:
       filter_date_format: "dd/mm/yy" # a combination of 'dd', 'mm' and 'yy' with any delimiter. No other interpolation will be done!
       search: "Rechercher"
       filter: "Filtrer"
-      refresh: "RafraÃ®chir"
+      refresh: "Rafraîchir"
       show_all: "Voir tout"
       add_filter: "Ajouter un filtre..."
       bulk_menu_title: "Objets sÃ©lectionnÃ©s..."

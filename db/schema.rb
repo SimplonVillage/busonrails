@@ -11,7 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150115093123) do
+ActiveRecord::Schema.define(version: 20150123145353) do
+
+  create_table "classes", force: true do |t|
+    t.string   "nom"
+    t.integer  "ecole_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "classes", ["ecole_id"], name: "index_classes_on_ecole_id"
+
+  create_table "classes_niveaus", id: false, force: true do |t|
+    t.integer "classe_id"
+    t.integer "niveau_id"
+  end
+
+  add_index "classes_niveaus", ["classe_id"], name: "index_classes_niveaus_on_classe_id"
+  add_index "classes_niveaus", ["niveau_id"], name: "index_classes_niveaus_on_niveau_id"
+
+  create_table "ecoles", force: true do |t|
+    t.string   "nom"
+    t.string   "adresse"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "enfants", force: true do |t|
     t.string   "nomenfant"
@@ -22,6 +46,12 @@ ActiveRecord::Schema.define(version: 20150115093123) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+  end
+
+  create_table "niveaus", force: true do |t|
+    t.string   "nom"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "parents", force: true do |t|

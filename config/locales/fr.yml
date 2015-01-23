@@ -7,6 +7,11 @@
 # Emended by Benjamin des Gachons and Patrick Chew : <http://www.fitima.org/docs/fiche.pdf>
 
 fr:
+  activerecord:
+    models:
+      niveau: 
+        one: Niveau
+        other: Niveaux
   date:
     abbr_day_names:
       - dim
