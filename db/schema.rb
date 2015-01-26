@@ -58,14 +58,13 @@ ActiveRecord::Schema.define(version: 20150123145353) do
     t.string   "nom"
     t.string   "prenom"
     t.text     "adresse"
-    t.string   "teldom"
-    t.string   "telpro"
+    t.string   "teldom",     limit: 10, null: false
     t.string   "urgnom"
     t.string   "urgprenom"
-    t.string   "urgtel"
+    t.string   "urgtel",     limit: 10, null: false
     t.text     "urgadresse"
-    t.string   "urgteldom"
-    t.string   "urgtelpro"
+    t.string   "urgteldom",  limit: 10, null: false
+    t.string   "urgtelpro",  limit: 10, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
