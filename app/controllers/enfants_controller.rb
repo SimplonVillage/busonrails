@@ -9,6 +9,7 @@ class EnfantsController < ApplicationController
 
   def create
     # créer un ENfant ds la BDD à partir du formulaire
+    # date = Date.new(enfant_params["datenaissance(1i)"].to_i, enfant_params["datenaissance(2i)"].to_i, enfant_params["datenaissance(3i)"].to_i)
 		@enfant = current_user.enfants.new(enfant_params)
     if @enfant.save
       if @enfant.user.parent == nil 
@@ -47,11 +48,13 @@ class EnfantsController < ApplicationController
   private
 
   def enfant_params
-    params.require(:enfant).permit(:nomenfant,
+    raw_params = params.require(:enfant).permit(:nomenfant,
                                   :prenomenfant,
-                                  :datenaissance,
                                   :ecole,
+                                  :birthday,
                                   :classe)
+
+    #raw_params[:datenaissance] = 
   end
 	
 end
