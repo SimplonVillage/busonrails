@@ -62,7 +62,6 @@ ActiveRecord::Schema.define(version: 20150128124332) do
     t.string   "teldom",     limit: 10, null: false
     t.string   "urgnom"
     t.string   "urgprenom"
-    t.string   "urgtel",     limit: 10, null: false
     t.text     "urgadresse"
     t.string   "urgteldom",  limit: 10, null: false
     t.string   "urgtelpro",  limit: 10, null: false
