@@ -15,7 +15,14 @@
         <%= f.label "Date de naissance :" %><br>
         <%= date_select :enfant, :birthday, start_year: Date.today.year - 13, end_year: Date.today.year - 2 %>
       </p> 
-      
+      <p>
+        <%= f.label "École :" %><br>
+        <%= f.select :ecole, @ecoles %>
+      </p>
+      <p>
+        <%= f.label "Classe :" %><br>
+        <%= f.select :classe, @classes %>
+      </p>
 
       <%= f.submit "Envoyer", :class => "btn btn-info nav-btn" %>
       </div>
