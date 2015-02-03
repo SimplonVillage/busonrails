@@ -14,42 +14,39 @@
   <p>
     <%= t.label "Nom :" %><br>
     <%= t.text_field :nom %>
-    <%= error_message_for @parent,:nom %>
+    <div class="alert alert-warning" role="alert"><%= error_message_for @parent,:nom %></div>
   </p> 
   <p>
     <%= t.label "Prénom :" %><br>
     <%= t.text_field :prenom %>
-    <%= error_message_for @parent,:prenom %>
+    <div class="alert alert-warning" role="alert"><%= error_message_for @parent,:prenom %></div>
   </p> 
   <p>
     <%= t.label "Adresse :" %><br>
     <%= t.text_area :adresse %>
-    <%= error_message_for @parent,:adresse %>
+    <div class="alert alert-warning" role="alert"><%= error_message_for @parent,:adresse %></div>
   </p>
   <p>
     <%= t.label "Tél domicile :" %><br>
     <%= t.text_field :teldom %>
-    <%= error_message_for @parent,:teldom %>
   </p>
   <p>
     <%= t.label "Tél portable de la Mère :" %><br>
     <%= t.text_field :telport1 %>
-    <%= error_message_for @parent,:telport1 %>
+    <div class="alert alert-warning" role="alert"><%= error_message_for @parent,:telport1 %></div>
   </p>
   <p>
     <%= t.label "Tél portable du Père :" %><br>
     <%= t.text_field :telport2 %>
-    <%= error_message_for @parent,:telport2 %>
+    <div class="alert alert-warning" role="alert"><%= error_message_for @parent,:telport2 %></div>
   </p>
   <p>
     <%= t.label "Tél professionnel de la Mère :" %><br>
     <%= t.text_field :telpro1 %>
-    <%= error_message_for @parent,:telpro1 %>
   </p>
   <p>
     <%= t.label "Tél professionnel du Père :" %><br>
     <%= t.text_field :telpro2 %>
-    <%= error_message_for @parent,:telpro2 %>
   </p>
 
 
@@ -61,32 +58,36 @@
   <p>
     <%= t.label "Nom :" %><br>
     <%= t.text_field :urgnom %>
-    <%= error_message_for @parent,:urgnom %>
+    <div class="alert alert-warning" role="alert"><%= error_message_for @parent,:urgnom %>
+    </div>
   </p>  
   <p>
     <%= t.label "Prénom :" %><br>
     <%= t.text_field :urgprenom %>
-    <%= error_message_for @parent,:urgprenom %>
+    <div class="alert alert-warning" role="alert"><%= error_message_for @parent,:urgprenom %>
+    </div>
   </p>
   <p>
     <%= t.label "Adresse :" %><br>
     <%= t.text_area :urgadresse %>
-    <%= error_message_for @parent,:urgadresse %>
   </p> 
   <p>
     <%= t.label "Tél portable urgence :" %><br>
     <%= t.text_field :urgtelport %>
-    <%= error_message_for @parent,:urgtelport %>
+    <div class="alert alert-warning" role="alert"><%= error_message_for @parent,:urgtelport %>
+    </div>
   </p>
   <p>
     <%= t.label "Tél domicile :" %><br>
     <%= t.text_field :urgteldom %>
-    <%= error_message_for @parent,:urgteldom %>
+    <div class="alert alert-warning" role="alert"><%= error_message_for @parent,:urgteldom %>
+    </div>
   </p>
   <p>
     <%= t.label "Tél professionnel :" %><br>
     <%= t.text_field :urgtelpro %>
-    <%= error_message_for @parent,:urgtelpro %>
+    <div class="alert alert-warning" role="alert"><%= error_message_for @parent,:urgtelpro %>
+    </div>
   </p>
 
   <li>
