@@ -13,18 +13,36 @@
   </p>
   <p>
     <%= t.label "Nom :" %><br>
-    <%= t.text_field :nom %>
-    <div class="alert alert-warning" role="alert"><%= error_message_for @parent,:nom %></div>
+    <div class="row">
+      <div class="col-md-6">
+        <%= t.text_field :nom %>
+      </div>
+      <div class="col-md-6">
+        <%= error_message_for @parent,:nom %>
+      </div>
+    </div>
   </p> 
   <p>
     <%= t.label "Prénom :" %><br>
-    <%= t.text_field :prenom %>
-    <div class="alert alert-warning" role="alert"><%= error_message_for @parent,:prenom %></div>
+    <div class="row">
+      <div class="col-md-6">
+        <%= t.text_field :prenom %>
+      </div>
+      <div class="col-md-6">
+        <%= error_message_for @parent,:prenom %>
+      </div>
+    </div>
   </p> 
   <p>
     <%= t.label "Adresse :" %><br>
-    <%= t.text_area :adresse %>
-    <div class="alert alert-warning" role="alert"><%= error_message_for @parent,:adresse %></div>
+    <div class="row">
+      <div class="col-md-6">
+        <%= t.text_area :adresse %>
+      </div>
+      <div class="col-md-6">
+        <%= error_message_for @parent,:adresse %>
+      </div>
+    </div>
   </p>
   <p>
     <%= t.label "Tél domicile :" %><br>
@@ -32,13 +50,25 @@
   </p>
   <p>
     <%= t.label "Tél portable de la Mère :" %><br>
-    <%= t.text_field :telport1 %>
-    <div class="alert alert-warning" role="alert"><%= error_message_for @parent,:telport1 %></div>
+    <div class="row">
+      <div class="col-md-6">
+        <%= t.text_field :telport1 %>
+      </div>
+      <div class="col-md-6">
+        <%= error_message_for @parent,:telport1 %>
+      </div>
+    </div>
   </p>
   <p>
     <%= t.label "Tél portable du Père :" %><br>
-    <%= t.text_field :telport2 %>
-    <div class="alert alert-warning" role="alert"><%= error_message_for @parent,:telport2 %></div>
+    <div class="row">
+      <div class="col-md-6">
+        <%= t.text_field :telport2 %>
+      </div>
+      <div class="col-md-6">
+        <%= error_message_for @parent,:telport2 %>
+      </div>
+    </div>
   </p>
   <p>
     <%= t.label "Tél professionnel de la Mère :" %><br>
@@ -57,14 +87,24 @@
   </p>
   <p>
     <%= t.label "Nom :" %><br>
-    <%= t.text_field :urgnom %>
-    <div class="alert alert-warning" role="alert"><%= error_message_for @parent,:urgnom %>
+    <div class="row">
+      <div class="col-md-6">
+        <%= t.text_field :urgnom %>
+      </div>
+      <div class="col-md-6">
+        <%= error_message_for @parent,:urgnom %>
+      </div>
     </div>
   </p>  
   <p>
     <%= t.label "Prénom :" %><br>
-    <%= t.text_field :urgprenom %>
-    <div class="alert alert-warning" role="alert"><%= error_message_for @parent,:urgprenom %>
+    <div class="row">
+      <div class="col-md-6">
+        <%= t.text_field :urgprenom %>
+      </div>
+      <div class="col-md-6">
+        <%= error_message_for @parent,:urgprenom %>
+      </div>
     </div>
   </p>
   <p>
@@ -73,20 +113,35 @@
   </p> 
   <p>
     <%= t.label "Tél portable urgence :" %><br>
-    <%= t.text_field :urgtelport %>
-    <div class="alert alert-warning" role="alert"><%= error_message_for @parent,:urgtelport %>
+    <div class="row">
+      <div class="col-md-6">
+        <%= t.text_field :urgtelport %>
+      </div>
+      <div class="col-md-6">
+        <%= error_message_for @parent,:urgtelport %>
+      </div>
     </div>
   </p>
   <p>
     <%= t.label "Tél domicile :" %><br>
-    <%= t.text_field :urgteldom %>
-    <div class="alert alert-warning" role="alert"><%= error_message_for @parent,:urgteldom %>
+    <div class="row">
+      <div class="col-md-6">
+        <%= t.text_field :urgteldom %>
+      </div>
+      <div class="col-md-6">
+        <%= error_message_for @parent,:urgteldom %>
+      </div>
     </div>
   </p>
   <p>
     <%= t.label "Tél professionnel :" %><br>
-    <%= t.text_field :urgtelpro %>
-    <div class="alert alert-warning" role="alert"><%= error_message_for @parent,:urgtelpro %>
+    <div class="row">
+      <div class="col-md-6">
+        <%= t.text_field :urgtelpro %>
+      </div>
+      <div class="col-md-6">
+        <%= error_message_for @parent,:urgtelpro %>
+      </div>
     </div>
   </p>
 
