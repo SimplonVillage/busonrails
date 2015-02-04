@@ -59,7 +59,13 @@ class ParentsController < ApplicationController
                                     :telport1,
                                     :telport2,
                                     :urgtelport,
-                                    :civilite2)
+                                    :civilite2,
+                                    :street_number, 
+                                    :route, 
+                                    :locality, 
+                                    :administrative_area_level_1, 
+                                    :postal_code, 
+                                    :country,)
   
   end
 
