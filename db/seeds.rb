@@ -23,5 +23,4 @@ Ecole.create([
               {nom: 'Ecole de CHAMPROND'},
               {nom: 'Ecole de MONTLANDON'},
               {nom: 'Ecole de ST ELIPH'},
-              {nom: 'Ecole de VAUPILLON'},
-              ])
+              {nom: 'Ecole de VAUPILLON'}])
