@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(version: 20150204144401) do
     t.string   "civilite2"
     t.string   "street_number"
     t.string   "route"
+    t.string   "locality"
     t.string   "administratrive_area_level_1"
     t.string   "postal_code"
     t.string   "country"

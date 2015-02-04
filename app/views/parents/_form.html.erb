@@ -38,6 +38,7 @@
     <div class="row">
       <div class="col-md-6">
         <%= t.text_field :adresse %>
+        <%= t.hidden_field :adresse %>
       </div>
       <div class="col-md-6">
         <%= error_message_for @parent,:adresse %>
@@ -208,7 +209,7 @@
 
     <!-- Include Google Maps JS API -->
     <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAHUfE-UYlqQt-ux15J_JqCZHRuC17fjeE">
+      src="https://maps.googleapis.com/maps/api/js?libraries=places&key=<%= ENV['GOOGLE_AUTOCOMPLETE_key'] %>">
     </script>
 
     <!-- Custom JS code to bind to Autocomplete API -->
