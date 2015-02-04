@@ -16,3 +16,12 @@ Niveau.create([
                 {nom: 'CE2'},
                 {nom: 'CM1'},
                 {nom: 'CM2'}])
+
+Ecole.create([
+              {nom: 'Ecole de BELHOMERT'},
+              {nom: 'Ecole de ST MAURICE et ST GERMAIN'},
+              {nom: 'Ecole de CHAMPROND'},
+              {nom: 'Ecole de MONTLANDON'},
+              {nom: 'Ecole de ST ELIPH'},
+              {nom: 'Ecole de VAUPILLON'},
+              ])
