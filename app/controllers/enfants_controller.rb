@@ -4,7 +4,9 @@ class EnfantsController < ApplicationController
     # renvoie le formulaire enfant
     @enfant = Enfant.new
     @ecoles = Ecole.all.map{ |ecole| [ecole.nom, ecole.id] }
-    @classes = Classe.all.map{ |classe| ["#{classe.ecole.nom} - #{classe.nom}", classe.id]}
+    @classes = Classe.all.map do |classe|
+      ["#{classe.ecole.nom} - #{classe.nom}", classe.id]
+    end
   end
 
   def create
@@ -24,6 +26,9 @@ class EnfantsController < ApplicationController
   end
 
   def edit
+    @classes = Classe.all.map do |classe|
+      ["#{classe.ecole.nom} - #{classe.nom}", classe.id]
+    end
     @enfant = Enfant.find(params[:id])
     if current_user.enfants.include?(@enfant)
     else
