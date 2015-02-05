@@ -9,11 +9,12 @@ function initializeAutocomplete(id, prefix) {
 function onPlaceChanged() {
   var place = this.getPlace();
 
-  console.log(place);  // Uncomment this line to view the full object returned by Google API.
+  //console.log(place);  // Uncomment this line to view the full object returned by Google API.
 
   for (var i in place.address_components) {
     var component = place.address_components[i];
     for (var j in component.types) {  // Some types are ["country", "political"]
+      console.log(prefix + component.types[j]); 
       var type_element = document.getElementById(prefix + component.types[j]);
       if (type_element) {
         type_element.value = component.long_name;

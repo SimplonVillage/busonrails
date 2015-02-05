@@ -13,10 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
-//= require bootstrap-sprockets
+//= require autocomplete
+// require bootstrap-sprockets
 
-$(document).ready(function() { 
-  GmapsAutoComplete.init();
-  GmapsAutoComplete.autoCompleteInit();
-});
