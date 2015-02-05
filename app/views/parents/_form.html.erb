@@ -38,7 +38,13 @@
     <div class="row">
       <div class="col-md-6">
         <%= t.text_field :adresse %>
-        <%= t.hidden_field :adresse %>
+        <%= t.text_field :street_number %>
+        <%= t.text_field :route %>
+        <%= t.text_field :locality %>
+        <%= t.text_field :administratrive_area_level_1 %>
+        <%= t.text_field :postal_code %>
+        <%= t.text_field :country %>
+      <!--<%= t.hidden_field :adresse %>-->      
       </div>
       <div class="col-md-6">
         <%= error_message_for @parent,:adresse %>
@@ -111,6 +117,13 @@
   <p>
     <%= t.label "Adresse :" %><br>
     <%= t.text_field :urgadresse %>
+    <%= t.text_field :urg_street_number %>
+    <%= t.text_field :urg_route %>
+    <%= t.text_field :urg_locality %>
+    <%= t.text_field :urg_administratrive_area_level_1 %>
+    <%= t.text_field :urg_postal_code %>
+    <%= t.text_field :urg_country %>
+
   </p> 
   <p>
     <%= t.label "Tél portable urgence :" %><br>
@@ -152,7 +165,7 @@
 
 
 
-  <form role="form" class="form-horizontal">
+<!--   <form role="form" class="form-horizontal">
             <fieldset>
                <div class="form-group">
                 <label class="col-sm-4 control-label">Address</label>
@@ -205,11 +218,11 @@
         </div>
       </div>
     </div>
-
+ -->
 
     <!-- Include Google Maps JS API -->
     <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?libraries=places&key=<%= ENV['GOOGLE_AUTOCOMPLETE_key'] %>">
+      src="https://maps.googleapis.com/maps/api/js?libraries=places">
     </script>
 
     <!-- Custom JS code to bind to Autocomplete API -->

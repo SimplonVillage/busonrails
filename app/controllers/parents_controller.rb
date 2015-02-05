@@ -65,7 +65,13 @@ class ParentsController < ApplicationController
                                     :locality, 
                                     :administrative_area_level_1, 
                                     :postal_code, 
-                                    :country,)
+                                    :country,                                    
+                                    :urg_street_number, 
+                                    :urg_route, 
+                                    :urg_locality, 
+                                    :urg_administrative_area_level_1, 
+                                    :urg_postal_code, 
+                                    :urg_country,)
   
   end
 

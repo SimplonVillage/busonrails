@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150204144401) do
+ActiveRecord::Schema.define(version: 20150205130648) do
 
   create_table "classes", force: true do |t|
     t.string   "nom"
@@ -60,12 +60,12 @@ ActiveRecord::Schema.define(version: 20150204144401) do
     t.string   "nom"
     t.string   "prenom"
     t.text     "adresse"
-    t.string   "teldom",                       limit: 10, null: false
+    t.string   "teldom",                           limit: 10, null: false
     t.string   "urgnom"
     t.string   "urgprenom"
     t.text     "urgadresse"
-    t.string   "urgteldom",                    limit: 10, null: false
-    t.string   "urgtelpro",                    limit: 10, null: false
+    t.string   "urgteldom",                        limit: 10, null: false
+    t.string   "urgtelpro",                        limit: 10, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
@@ -82,6 +82,12 @@ ActiveRecord::Schema.define(version: 20150204144401) do
     t.string   "administratrive_area_level_1"
     t.string   "postal_code"
     t.string   "country"
+    t.string   "urg_street_number"
+    t.string   "urg_route"
+    t.string   "urg_locality"
+    t.string   "urg_administratrive_area_level_1"
+    t.string   "urg_postal_code"
+    t.string   "urg_country"
   end
 
   create_table "users", force: true do |t|
