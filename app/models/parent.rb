@@ -26,5 +26,4 @@ class Parent < ActiveRecord::Base
   validates :urgtelpro, presence: true, numericality: true, length: { is: 10 }
 
 
-
 end

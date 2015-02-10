@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 	authenticates_with_sorcery!
-  has_one :parent
-  has_many :enfants
+  has_one :parent, dependent: :destroy
+  has_many :enfants, dependent: :destroy
 
   validates :password, length: { minimum: 4 }
   validates :password, confirmation: true
@@ -15,5 +15,35 @@ class User < ActiveRecord::Base
   def is_admin?
   	admin
   end
+
+  
+  rails_admin do  
+    list do 
+      field :id do
+        label "Id"
+      end
+      field :email do
+        label "Email"
+      end
+      field :created_at do 
+        label "classe"
+      end
+      field :created_at do
+          label "Créer le"
+      end
+        field :updated_at do
+          label "Mis à jour le "
+      end
+      field :admin do
+        label "Admin"
+      end
+      # field :parent do
+      #   label "Parent"
+      # end
+      # field :enfant do
+      #   label "Enfant"
+      # end
+    end
+  end 
 
 end

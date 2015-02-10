@@ -55,9 +55,9 @@ class EnfantsController < ApplicationController
   def enfant_params
     raw_params = params.require(:enfant).permit(:nomenfant,
                                   :prenomenfant,
-                                  :ecole,
+                                  :ecole_id,
                                   :birthday,
-                                  :classe)
+                                  :classe_id)
 
     #raw_params[:datenaissance] = 
   end
