@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150205161514) do
+ActiveRecord::Schema.define(version: 20150211131202) do
 
   create_table "classes", force: true do |t|
     t.string   "nom"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20150205161514) do
     t.date     "birthday"
     t.string   "nom"
     t.integer  "niveau_id"
+    t.string   "sexe"
   end
 
   create_table "niveaus", force: true do |t|

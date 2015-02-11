@@ -57,7 +57,8 @@ class EnfantsController < ApplicationController
                                   :prenomenfant,
                                   :ecole_id,
                                   :birthday,
-                                  :classe_id)
+                                  :classe_id,
+                                  :sexe,)
 
     #raw_params[:datenaissance] = 
   end
