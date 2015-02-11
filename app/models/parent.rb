@@ -9,21 +9,15 @@ class Parent < ActiveRecord::Base
 	validates_presence_of :civilite, 
                         :prenom, 
                         :adresse,
+                        :civilite2,
                         :urgnom, 
-                        :urgprenom, 
-                        :telport1,
-                        :urgtelport,
-                        :civilite2
+                        :urgprenom 
 
 
-  validates :teldom, presence: true, numericality: true, length: { is: 10 }
-  validates :telport1, presence: true, numericality: true, length: { is: 10 }
-  validates :telport2, presence: true, numericality: true, length: { is: 10 }
-  # validates :telpro1, numericality: true, length: { is: 10 }
-  # validates :telpro2, numericality: true, length: { is: 10 }
-  validates :urgteldom, presence: true, numericality: true, length: { is: 10 }
-  validates :urgtelport, presence: true, numericality: true, length: { is: 10 }
-  validates :urgtelpro, presence: true, numericality: true, length: { is: 10 }
-
+  validates :tel1, presence: true, numericality: true, length: { is: 10 }
+  validates :tel2, presence: true, numericality: true, length: { is: 10 }
+  validates :tel3, presence: true, numericality: true, length: { is: 10 }
+  validates :urgtel, presence: true, numericality: true, length: { is: 10 }
+ 
 
 end

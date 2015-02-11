@@ -45,35 +45,35 @@
     </div>
   </p>
   <p>
-    <%= t.label "Tél domicile :" %><br>
+    <%= t.label "Tél 1:" %><br>
     <div class="row">
       <div class="col-md-6">
-        <%= t.text_field :teldom, :placeholder => "Obligatoire" %>
+        <%= t.text_field :tel1, :placeholder => "Obligatoire" %>
       </div>
       <div class="col-md-6">
-        <%= error_message_for @parent,:teldom %>
+        <%= error_message_for @parent,:tel1 %>
       </div>
     </div>
   </p>
   <p>
-    <%= t.label "Tél portable de la Mère :" %><br>
+    <%= t.label "Tél 2:" %><br>
     <div class="row">
       <div class="col-md-6">
-        <%= t.text_field :telport1, :placeholder => "Obligatoire" %>
+        <%= t.text_field :tel2, :placeholder => "Obligatoire" %>
       </div>
       <div class="col-md-6">
-        <%= error_message_for @parent,:telport1 %>
+        <%= error_message_for @parent,:tel2 %>
       </div>
     </div>
   </p>
   <p>
-    <%= t.label "Tél portable du Père :" %><br>
+    <%= t.label "Tél 3:" %><br>
     <div class="row">
       <div class="col-md-6">
-        <%= t.text_field :telport2, :placeholder => "Obligatoire" %>
+        <%= t.text_field :tel3, :placeholder => "Obligatoire" %>
       </div>
       <div class="col-md-6">
-        <%= error_message_for @parent,:telport2 %>
+        <%= error_message_for @parent,:tel3 %>
       </div>
     </div>
   </p>
@@ -111,38 +111,17 @@
     <%= t.text_field :urgadresse %>
   </p> 
   <p>
-    <%= t.label "Tél portable urgence :" %><br>
+    <%= t.label "Tél d'urgence :" %><br>
     <div class="row">
       <div class="col-md-6">
-        <%= t.text_field :urgtelport, :placeholder => "Obligatoire" %>
+        <%= t.text_field :urgtel, :placeholder => "Obligatoire" %>
       </div>
       <div class="col-md-6">
-        <%= error_message_for @parent,:urgtelport %>
+        <%= error_message_for @parent,:urgtel %>
       </div>
     </div>
   </p>
-  <p>
-    <%= t.label "Tél domicile :" %><br>
-    <div class="row">
-      <div class="col-md-6">
-        <%= t.text_field :urgteldom, :placeholder => "Obligatoire" %>
-      </div>
-      <div class="col-md-6">
-        <%= error_message_for @parent,:urgteldom %>
-      </div>
-    </div>
-  </p>
-  <p>
-    <%= t.label "Tél professionnel :" %><br>
-    <div class="row">
-      <div class="col-md-6">
-        <%= t.text_field :urgtelpro, :placeholder => "Obligatoire" %>
-      </div>
-      <div class="col-md-6">
-        <%= error_message_for @parent,:urgtelpro %>
-      </div>
-    </div>
-  </p>
+
 
 
     <%= t.submit "Enregistrer", :class => "btn btn-info nav-btn" %>
