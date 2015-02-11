@@ -15,7 +15,7 @@
     <%= t.label "Nom :" %><br>
     <div class="row">
       <div class="col-md-6">
-        <%= t.text_field :nom %>
+        <%= t.text_field :nom, :placeholder => "Obligatoire" %>
       </div>
       <div class="col-md-6">
         <%= error_message_for @parent,:nom %>
@@ -26,7 +26,7 @@
     <%= t.label "Prénom :" %><br>
     <div class="row">
       <div class="col-md-6">
-        <%= t.text_field :prenom %>
+        <%= t.text_field :prenom, :placeholder => "Obligatoire"%>
       </div>
       <div class="col-md-6">
         <%= error_message_for @parent,:prenom %>
@@ -46,13 +46,20 @@
   </p>
   <p>
     <%= t.label "Tél domicile :" %><br>
-    <%= t.text_field :teldom %>
+    <div class="row">
+      <div class="col-md-6">
+        <%= t.text_field :teldom, :placeholder => "Obligatoire" %>
+      </div>
+      <div class="col-md-6">
+        <%= error_message_for @parent,:teldom %>
+      </div>
+    </div>
   </p>
   <p>
     <%= t.label "Tél portable de la Mère :" %><br>
     <div class="row">
       <div class="col-md-6">
-        <%= t.text_field :telport1 %>
+        <%= t.text_field :telport1, :placeholder => "Obligatoire" %>
       </div>
       <div class="col-md-6">
         <%= error_message_for @parent,:telport1 %>
@@ -63,20 +70,12 @@
     <%= t.label "Tél portable du Père :" %><br>
     <div class="row">
       <div class="col-md-6">
-        <%= t.text_field :telport2 %>
+        <%= t.text_field :telport2, :placeholder => "Obligatoire" %>
       </div>
       <div class="col-md-6">
         <%= error_message_for @parent,:telport2 %>
       </div>
     </div>
-  </p>
-  <p>
-    <%= t.label "Tél professionnel de la Mère :" %><br>
-    <%= t.text_field :telpro1 %>
-  </p>
-  <p>
-    <%= t.label "Tél professionnel du Père :" %><br>
-    <%= t.text_field :telpro2 %>
   </p>
 
 
@@ -89,7 +88,7 @@
     <%= t.label "Nom :" %><br>
     <div class="row">
       <div class="col-md-6">
-        <%= t.text_field :urgnom %>
+        <%= t.text_field :urgnom, :placeholder => "Obligatoire" %>
       </div>
       <div class="col-md-6">
         <%= error_message_for @parent,:urgnom %>
@@ -100,7 +99,7 @@
     <%= t.label "Prénom :" %><br>
     <div class="row">
       <div class="col-md-6">
-        <%= t.text_field :urgprenom %>
+        <%= t.text_field :urgprenom, :placeholder => "Obligatoire" %>
       </div>
       <div class="col-md-6">
         <%= error_message_for @parent,:urgprenom %>
@@ -115,7 +114,7 @@
     <%= t.label "Tél portable urgence :" %><br>
     <div class="row">
       <div class="col-md-6">
-        <%= t.text_field :urgtelport %>
+        <%= t.text_field :urgtelport, :placeholder => "Obligatoire" %>
       </div>
       <div class="col-md-6">
         <%= error_message_for @parent,:urgtelport %>
@@ -126,7 +125,7 @@
     <%= t.label "Tél domicile :" %><br>
     <div class="row">
       <div class="col-md-6">
-        <%= t.text_field :urgteldom %>
+        <%= t.text_field :urgteldom, :placeholder => "Obligatoire" %>
       </div>
       <div class="col-md-6">
         <%= error_message_for @parent,:urgteldom %>
@@ -137,7 +136,7 @@
     <%= t.label "Tél professionnel :" %><br>
     <div class="row">
       <div class="col-md-6">
-        <%= t.text_field :urgtelpro %>
+        <%= t.text_field :urgtelpro, :placeholder => "Obligatoire" %>
       </div>
       <div class="col-md-6">
         <%= error_message_for @parent,:urgtelpro %>
