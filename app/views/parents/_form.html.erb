@@ -45,7 +45,7 @@
     </div>
   </p>
   <p>
-    <%= t.label "Tél 1:" %><br>
+    <%= t.label "Tél 1:" %> <%= t.select :origine1, %w{ Domicile Portable-Mère Portable-Père } %><br>
     <div class="row">
       <div class="col-md-6">
         <%= t.text_field :tel1, :placeholder => "Obligatoire" %>
@@ -56,7 +56,7 @@
     </div>
   </p>
   <p>
-    <%= t.label "Tél 2:" %><br>
+    <%= t.label "Tél 2:" %> <%= t.select :origine2, %w{ Domicile Portable-Mère Portable-Père } %><br>
     <div class="row">
       <div class="col-md-6">
         <%= t.text_field :tel2, :placeholder => "Obligatoire" %>
@@ -67,7 +67,7 @@
     </div>
   </p>
   <p>
-    <%= t.label "Tél 3:" %><br>
+    <%= t.label "Tél 3:" %> <%= t.select :origine3, %w{ Domicile Portable-Mère Portable-Père } %><br>
     <div class="row">
       <div class="col-md-6">
         <%= t.text_field :tel3, :placeholder => "Obligatoire" %>

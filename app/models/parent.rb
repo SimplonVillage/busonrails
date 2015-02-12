@@ -11,7 +11,10 @@ class Parent < ActiveRecord::Base
                         :adresse,
                         :civilite2,
                         :urgnom, 
-                        :urgprenom 
+                        :urgprenom,
+                        :origine1,
+                        :origine2,
+                        :origine3
 
 
   validates :tel1, presence: true, numericality: true, length: { is: 10 }

@@ -24,7 +24,7 @@ class Classe < ActiveRecord::Base
 
      edit do 
       field :nom do
-        label "Nom de l'école"
+        label "Nom de la classe"
       end
       field :ecole_id, :enum do 
         label "École"

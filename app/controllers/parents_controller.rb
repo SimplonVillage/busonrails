@@ -55,7 +55,10 @@ class ParentsController < ApplicationController
                                     :urgnom, 
                                     :urgprenom, 
                                     :urgadresse,
-                                    :urgtel,)
+                                    :urgtel,
+                                    :origine1,
+                                    :origine2,
+                                    :origine3,)
   
   end
 
