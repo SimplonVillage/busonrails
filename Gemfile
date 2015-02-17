@@ -50,6 +50,8 @@ gem 'gmaps-autocomplete-rails'
 
 
 gem 'prawn'
+gem 'geocoder'
+
 
 
 #gem pour le log in 

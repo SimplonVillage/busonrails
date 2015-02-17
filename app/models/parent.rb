@@ -23,6 +23,10 @@ class Parent < ActiveRecord::Base
   validates :urgtel, presence: true, numericality: true, length: { is: 10 }
  
 
+geocoded_by :adresse   # can also be an IP address
+after_validation :geocode          # auto-fetch coordinates
+
+
   RailsAdmin.config do |config|
       config.model 'Parent' do  
         list do 
