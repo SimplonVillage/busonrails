@@ -1,5 +1,6 @@
 class Ecole < ActiveRecord::Base
   has_many :classes
+  belongs_to :station
   
   RailsAdmin.config do |config|
     config.model 'Ecole' do  

@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150212095025) do
+ActiveRecord::Schema.define(version: 20150217210334) do
+
+  create_table "circuits", force: true do |t|
+    t.string   "nom"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "circuits_stations", id: false, force: true do |t|
+    t.integer "circuit_id"
+    t.integer "station_id"
+  end
+
+  add_index "circuits_stations", ["circuit_id"], name: "index_circuits_stations_on_circuit_id"
+  add_index "circuits_stations", ["station_id"], name: "index_circuits_stations_on_station_id"
 
   create_table "classes", force: true do |t|
     t.string   "nom"
@@ -35,6 +49,7 @@ ActiveRecord::Schema.define(version: 20150212095025) do
     t.string   "adresse"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "station_id"
   end
 
   create_table "enfants", force: true do |t|
@@ -49,7 +64,10 @@ ActiveRecord::Schema.define(version: 20150212095025) do
     t.string   "nom"
     t.integer  "niveau_id"
     t.string   "sexe"
+    t.integer  "station_id"
   end
+
+  add_index "enfants", ["station_id"], name: "index_enfants_on_station_id"
 
   create_table "niveaus", force: true do |t|
     t.string   "nom"
@@ -76,6 +94,15 @@ ActiveRecord::Schema.define(version: 20150212095025) do
     t.string   "origine1"
     t.string   "origine2"
     t.string   "origine3"
+  end
+
+  create_table "stations", force: true do |t|
+    t.string   "nom"
+    t.string   "adresse"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|

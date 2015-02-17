@@ -6,7 +6,7 @@
 
         <p>
           <%= f.label  "Sexe :" %>
-          <%= f.select :sexe, %w{ Masculin Féminin } %> <br> 
+          <%= f.select :sexe, %w{ M F } %> <br> 
         </p>
         <p>
            <%= f.label "Nom :" %><br>
@@ -30,9 +30,11 @@
           <div class="col-md-3 ">
             <%= f.submit "Envoyer", :class => "btn btn-info nav-btn" %>
           </div>
+          <% if params[:action] == "new" %>
           <div class="col-md-3 ">
-            <%= button_to "Ajouter un enfant",  new_enfant_path, :class => "btn btn-info", :method => :get %>  
+            <%= button_to "Enregistrer et ajouter un enfant",  save_and_new_enfant_path, type: :save_and_new, name: :save_and_new, :class => "btn btn-info", :method => :post %>  
           </div>
+          <% end %>
         </div>
       </div>
     </div>

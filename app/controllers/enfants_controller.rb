@@ -21,10 +21,10 @@ class EnfantsController < ApplicationController
       end
     else
       render action: 'new'
-    end
-  
+    end  
   end
-
+# if @enfant== true
+#redirect_to new_enfant_path
   def edit
     @classes = Classe.all.map do |classe|
       ["#{classe.ecole.nom} - #{classe.nom}", classe.id]
@@ -49,6 +49,23 @@ class EnfantsController < ApplicationController
     end 
   end
 
+  # def create_and_new
+  #   binding.pry
+  # end
+
+  def show
+    @enfant = Enfant.find(params[:id])
+    respond_to do |format|
+      #format.hmtl
+      format.pdf do
+        pdf = Prawn::Document.new
+        pdf.text "Hello world"
+        send_data pdf.render, filename: "Carte_#{@enfant.nom}.pdf",
+                              type: "application/pdf",
+                              disposition: "inline"
+      end
+    end
+  end
 
   private
 

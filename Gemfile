@@ -49,7 +49,7 @@ gem 'jquery-ui-rails'
 gem 'gmaps-autocomplete-rails'
 
 
-
+gem 'prawn'
 
 
 #gem pour le log in 
