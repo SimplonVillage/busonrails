@@ -9,6 +9,16 @@ class Enfant < ActiveRecord::Base
   validates :nomenfant, format: { with: /\A[A-Za-zé\.¸UûÙùàÀèÈéÉïÏîÎôÔêÊçÇ \,\\\'-]+\z/, message: I18n.t('errors.messages.not_a_string') } 
   validates :prenomenfant, format: { with: /\A[A-Za-zé\.¸UûÙùàÀèÈéÉïÏîÎôÔêÊçÇ \,\\\'-]+\z/, message: I18n.t('errors.messages.not_a_string') } 
   
+  def get_station
+
+    ecole.circuit.stations.map { |station| station.distance_from(location) }
+  end
+  def location
+    [parent.latitude,parent.longitude]
+  end
+
+
+
   RailsAdmin.config do |config|
     config.model 'Enfant' do  
       list do 

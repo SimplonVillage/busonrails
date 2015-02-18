@@ -1,6 +1,10 @@
 class Ecole < ActiveRecord::Base
   has_many :classes
   belongs_to :station
+
+  def circuit
+    station.circuits.first
+  end
   
   RailsAdmin.config do |config|
     config.model 'Ecole' do  
