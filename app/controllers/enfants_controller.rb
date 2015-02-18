@@ -58,9 +58,8 @@ class EnfantsController < ApplicationController
     respond_to do |format|
       #format.hmtl
       format.pdf do
-        pdf = Prawn::Document.new
-        pdf.text "Hello world"
-        send_data pdf.render, filename: "Carte_#{@enfant.nom}.pdf",
+        pdf = CartePdf.new(@enfant)
+        send_data pdf.render, filename: "Carte_#{@enfant.id}.pdf",
                               type: "application/pdf",
                               disposition: "inline"
       end
