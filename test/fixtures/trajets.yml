@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  jours: MyString
+  montants: 1
+  descendants: 1
+
+two:
+  jours: MyString
+  montants: 1
+  descendants: 1

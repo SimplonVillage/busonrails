@@ -3,6 +3,8 @@ class Enfant < ActiveRecord::Base
   belongs_to :classe
   belongs_to :niveau
   belongs_to :station
+  belongs_to :ecole
+  has_and_belongs_to_many :trajets
   
   validates_presence_of :sexe
 

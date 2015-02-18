@@ -1,6 +1,7 @@
 class Ecole < ActiveRecord::Base
   has_many :classes
   belongs_to :station
+  has_many :enfants
 
   def circuit
     station.circuits.first

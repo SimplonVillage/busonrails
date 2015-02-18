@@ -2,6 +2,9 @@ class CartePdf < Prawn::Document
 
 ##doc pour custome le PDF http://prawnpdf.org/manual.pdf
 ## a partir de la page 40 pour le front 
+## box page 66
+## image et texte page 79
+
 
 def initialize(enfant)
   super(top_margin: 70)
