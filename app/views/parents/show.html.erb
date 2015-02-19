@@ -1,8 +1,6 @@
 <div class="container-fluid">
   <h1 class="titre">Tableau de bord</h1>
 
-  <h2 class="titre">Bonjour <%= @parent.prenom.capitalize %></h2>
-
   <% @enfants.each do |enfant| %>
     <div class="col row col-md-6 col-md-offset-3">
       <h3 colspan="2" class="titre">Liste des enfants</h3>
