@@ -17,7 +17,7 @@ class ParentsController < ApplicationController
   def create
     @parent = current_user.build_parent(parent_params)
     if @parent.save
-      redirect_to parent_path(@parent.id)
+      redirect_to new_enfant_path
     else
       render action: 'new'
     end

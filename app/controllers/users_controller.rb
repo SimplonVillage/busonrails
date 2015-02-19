@@ -31,7 +31,7 @@ class UsersController < ApplicationController
       if @user.save
         Mailer.welcome_email(@user).deliver
         login(@user.email, user_params[:password])
-        format.html { redirect_to new_enfant_path, notice: "L'utilisateur a bien été créé." }
+        format.html { redirect_to new_parent_path, notice: "L'utilisateur a bien été créé." }
         format.json { render :show, status: :created, location: @user }
         #redirect_to(:users, notice: "L'utilisateur a bien été créé.")
       else

@@ -3,17 +3,17 @@ class Enfant < ActiveRecord::Base
   belongs_to :classe
   belongs_to :niveau
   belongs_to :station
-  belongs_to :ecole
   has_and_belongs_to_many :trajets
   
   validates_presence_of :sexe
 
   validates :nomenfant, format: { with: /\A[A-Za-zé\.¸UûÙùàÀèÈéÉïÏîÎôÔêÊçÇ \,\\\'-]+\z/, message: I18n.t('errors.messages.not_a_string') } 
-  validates :prenomenfant, format: { with: /\A[A-Za-zé\.¸UûÙùàÀèÈéÉïÏîÎôÔêÊçÇ \,\\\'-]+\z/, message: I18n.t('errors.messages.not_a_string') } 
-  
-  def get_station
+  validates :prenomenfant, format: { with: /\A[A-Za-zé\.¸UûÙùàÀèÈéÉïÏîÎôÔêÊçÇ \,\\\'-]+\z/, message: I18n.t('errors.messages.not_a_string') }
 
-    ecole.circuit.stations.map { |station| station.distance_from(location) }
+  before_create :set_station
+  
+  def set_station
+    self.station = classe.ecole.circuit.stations.min { |a, b| a.distance_from(location) <=> b.distance_from(location)}
   end
   def location
     [parent.latitude,parent.longitude]

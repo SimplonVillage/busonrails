@@ -12,19 +12,18 @@ class EnfantsController < ApplicationController
   def create
     # créer un ENfant ds la BDD à partir du formulaire
     # date = Date.new(enfant_params["datenaissance(1i)"].to_i, enfant_params["datenaissance(2i)"].to_i, enfant_params["datenaissance(3i)"].to_i)
-		@enfant = current_user.enfants.new(enfant_params)
+    @enfant = current_user.enfants.new(enfant_params)
     if @enfant.save
-      if @enfant.user.parent == nil 
-        redirect_to new_parent_path
-      else
+      if params[:commit].length < 10 # WTF ???
         redirect_to parent_path(current_user)
+      else
+        redirect_to new_enfant_path
       end
     else
       render action: 'new'
     end  
   end
-# if @enfant== true
-#redirect_to new_enfant_path
+
   def edit
     @classes = Classe.all.map do |classe|
       ["#{classe.ecole.nom} - #{classe.nom}", classe.id]
@@ -48,10 +47,6 @@ class EnfantsController < ApplicationController
        redirect_to parent_path(current_user)
     end 
   end
-
-  # def create_and_new
-  #   binding.pry
-  # end
 
   def show
     @enfant = Enfant.find(params[:id])

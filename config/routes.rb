@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 
   resources :parents
 
-  post 'enfants/ajouter' => 'enfants#create_and_new', as: :save_and_new_enfant
   resources :enfants
   
   get 'inscription' => 'inscription#index'

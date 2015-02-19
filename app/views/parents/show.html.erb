@@ -33,6 +33,10 @@
             <th>Classe</th>
             <td><%= enfant.classe.nom %></td>            
           </tr>
+          <tr> 
+            <th>Circuit</th>
+            <td><%= enfant.classe.ecole.try(:circuit).try(:nom) %></td>            
+          </tr>          
           </th>
         </table>
     </div>

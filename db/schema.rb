@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150217211743) do
+ActiveRecord::Schema.define(version: 20150218205102) do
+
+  create_table "arrets", force: true do |t|
+    t.time     "horaire"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "trajet_id"
+    t.integer  "station_id"
+  end
 
   create_table "circuits", force: true do |t|
     t.string   "nom"
@@ -69,6 +77,14 @@ ActiveRecord::Schema.define(version: 20150217211743) do
 
   add_index "enfants", ["station_id"], name: "index_enfants_on_station_id"
 
+  create_table "enfants_trajets", id: false, force: true do |t|
+    t.integer "enfant_id"
+    t.integer "trajet_id"
+  end
+
+  add_index "enfants_trajets", ["enfant_id"], name: "index_enfants_trajets_on_enfant_id"
+  add_index "enfants_trajets", ["trajet_id"], name: "index_enfants_trajets_on_trajet_id"
+
   create_table "niveaus", force: true do |t|
     t.string   "nom"
     t.datetime "created_at"
@@ -105,6 +121,15 @@ ActiveRecord::Schema.define(version: 20150217211743) do
     t.float    "longitude"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "trajets", force: true do |t|
+    t.string   "jours"
+    t.integer  "montants"
+    t.integer  "descendants"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "circuit_id"
   end
 
   create_table "users", force: true do |t|

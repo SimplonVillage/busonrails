@@ -32,7 +32,7 @@
           </div>
           <% if params[:action] == "new" %>
           <div class="col-md-3 ">
-            <%= button_to "Enregistrer et ajouter un enfant",  save_and_new_enfant_path, type: :save_and_new, name: :save_and_new, :class => "btn btn-info", :method => :post %>  
+            <%= f.submit "Enregistrer et ajouter un enfant", :class => "btn btn-info" %>  
           </div>
           <% end %>
         </div>

@@ -1,4 +1,4 @@
 class Arret < ActiveRecord::Base
-  belong_to :trajet
-  belong_to :station
+  belongs_to :trajet
+  belongs_to :station
 end
